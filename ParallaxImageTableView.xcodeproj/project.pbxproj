@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FA9837D1B5949040099DADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9837C1B5949040099DADB /* AppDelegate.swift */; };
+		2FA983821B5949040099DADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA983801B5949040099DADB /* Main.storyboard */; };
+		2FA983841B5949040099DADB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA983831B5949040099DADB /* Images.xcassets */; };
+		2FA983871B5949040099DADB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA983851B5949040099DADB /* LaunchScreen.xib */; };
+		2FA983931B5949040099DADB /* ParallaxImageTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA983921B5949040099DADB /* ParallaxImageTableViewTests.swift */; };
+		2FA9839D1B5949290099DADB /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9839C1B5949290099DADB /* ImageTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FA9838D1B5949040099DADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FA9836F1B5949040099DADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FA983761B5949040099DADB;
+			remoteInfo = ParallaxImageTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2FA983771B5949040099DADB /* ParallaxImageTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxImageTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA9837B1B5949040099DADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FA9837C1B5949040099DADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FA983811B5949040099DADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2FA983831B5949040099DADB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2FA983861B5949040099DADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2FA9838C1B5949040099DADB /* ParallaxImageTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxImageTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA983911B5949040099DADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FA983921B5949040099DADB /* ParallaxImageTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxImageTableViewTests.swift; sourceTree = "<group>"; };
+		2FA9839C1B5949290099DADB /* ImageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FA983741B5949040099DADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FA983891B5949040099DADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FA9836E1B5949040099DADB = {
+			isa = PBXGroup;
+			children = (
+				2FA983791B5949040099DADB /* ParallaxImageTableView */,
+				2FA9838F1B5949040099DADB /* ParallaxImageTableViewTests */,
+				2FA983781B5949040099DADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2FA983781B5949040099DADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FA983771B5949040099DADB /* ParallaxImageTableView.app */,
+				2FA9838C1B5949040099DADB /* ParallaxImageTableViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FA983791B5949040099DADB /* ParallaxImageTableView */ = {
+			isa = PBXGroup;
+			children = (
+				2FA9837C1B5949040099DADB /* AppDelegate.swift */,
+				2FA983801B5949040099DADB /* Main.storyboard */,
+				2FA983831B5949040099DADB /* Images.xcassets */,
+				2FA983851B5949040099DADB /* LaunchScreen.xib */,
+				2FA9837A1B5949040099DADB /* Supporting Files */,
+				2FA9839C1B5949290099DADB /* ImageTableViewController.swift */,
+			);
+			path = ParallaxImageTableView;
+			sourceTree = "<group>";
+		};
+		2FA9837A1B5949040099DADB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FA9837B1B5949040099DADB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2FA9838F1B5949040099DADB /* ParallaxImageTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				2FA983921B5949040099DADB /* ParallaxImageTableViewTests.swift */,
+				2FA983901B5949040099DADB /* Supporting Files */,
+			);
+			path = ParallaxImageTableViewTests;
+			sourceTree = "<group>";
+		};
+		2FA983901B5949040099DADB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FA983911B5949040099DADB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2FA983761B5949040099DADB /* ParallaxImageTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FA983961B5949040099DADB /* Build configuration list for PBXNativeTarget "ParallaxImageTableView" */;
+			buildPhases = (
+				2FA983731B5949040099DADB /* Sources */,
+				2FA983741B5949040099DADB /* Frameworks */,
+				2FA983751B5949040099DADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParallaxImageTableView;
+			productName = ParallaxImageTableView;
+			productReference = 2FA983771B5949040099DADB /* ParallaxImageTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2FA9838B1B5949040099DADB /* ParallaxImageTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FA983991B5949040099DADB /* Build configuration list for PBXNativeTarget "ParallaxImageTableViewTests" */;
+			buildPhases = (
+				2FA983881B5949040099DADB /* Sources */,
+				2FA983891B5949040099DADB /* Frameworks */,
+				2FA9838A1B5949040099DADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FA9838E1B5949040099DADB /* PBXTargetDependency */,
+			);
+			name = ParallaxImageTableViewTests;
+			productName = ParallaxImageTableViewTests;
+			productReference = 2FA9838C1B5949040099DADB /* ParallaxImageTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FA9836F1B5949040099DADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Xebia;
+				TargetAttributes = {
+					2FA983761B5949040099DADB = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2FA9838B1B5949040099DADB = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 2FA983761B5949040099DADB;
+					};
+				};
+			};
+			buildConfigurationList = 2FA983721B5949040099DADB /* Build configuration list for PBXProject "ParallaxImageTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2FA9836E1B5949040099DADB;
+			productRefGroup = 2FA983781B5949040099DADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FA983761B5949040099DADB /* ParallaxImageTableView */,
+				2FA9838B1B5949040099DADB /* ParallaxImageTableViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FA983751B5949040099DADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FA983821B5949040099DADB /* Main.storyboard in Resources */,
+				2FA983871B5949040099DADB /* LaunchScreen.xib in Resources */,
+				2FA983841B5949040099DADB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FA9838A1B5949040099DADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FA983731B5949040099DADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FA9837D1B5949040099DADB /* AppDelegate.swift in Sources */,
+				2FA9839D1B5949290099DADB /* ImageTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FA983881B5949040099DADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FA983931B5949040099DADB /* ParallaxImageTableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FA9838E1B5949040099DADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FA983761B5949040099DADB /* ParallaxImageTableView */;
+			targetProxy = 2FA9838D1B5949040099DADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2FA983801B5949040099DADB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FA983811B5949040099DADB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2FA983851B5949040099DADB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FA983861B5949040099DADB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2FA983941B5949040099DADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FA983951B5949040099DADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2FA983971B5949040099DADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParallaxImageTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2FA983981B5949040099DADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParallaxImageTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2FA9839A1B5949040099DADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParallaxImageTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParallaxImageTableView.app/ParallaxImageTableView";
+			};
+			name = Debug;
+		};
+		2FA9839B1B5949040099DADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParallaxImageTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParallaxImageTableView.app/ParallaxImageTableView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FA983721B5949040099DADB /* Build configuration list for PBXProject "ParallaxImageTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FA983941B5949040099DADB /* Debug */,
+				2FA983951B5949040099DADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FA983961B5949040099DADB /* Build configuration list for PBXNativeTarget "ParallaxImageTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FA983971B5949040099DADB /* Debug */,
+				2FA983981B5949040099DADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2FA983991B5949040099DADB /* Build configuration list for PBXNativeTarget "ParallaxImageTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FA9839A1B5949040099DADB /* Debug */,
+				2FA9839B1B5949040099DADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2FA9836F1B5949040099DADB /* Project object */;
+}

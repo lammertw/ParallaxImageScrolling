@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cQG-KG-LJb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Image Table View Controller-->
+        <scene sceneID="NxT-4U-XZH">
+            <objects>
+                <tableViewController id="cQG-KG-LJb" customClass="ImageTableViewController" customModule="ParallaxImageTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HF0-KF-907">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="300" id="Q8D-kB-UOk">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q8D-kB-UOk" id="DDk-Vv-03H">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-aN-PtB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="KXu-aN-PtB" secondAttribute="height" multiplier="2:1" id="iMr-Dc-fTW"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KXu-aN-PtB" firstAttribute="leading" secondItem="DDk-Vv-03H" secondAttribute="leading" id="Se1-WF-OtH"/>
+                                        <constraint firstItem="KXu-aN-PtB" firstAttribute="top" secondItem="DDk-Vv-03H" secondAttribute="top" id="ZwP-kB-Evg"/>
+                                        <constraint firstAttribute="trailing" secondItem="KXu-aN-PtB" secondAttribute="trailing" id="ft9-rR-VWA"/>
+                                        <constraint firstAttribute="bottom" secondItem="KXu-aN-PtB" secondAttribute="bottom" id="l9l-WZ-jr7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" id="Pqd-Fr-LY4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pqd-Fr-LY4" id="1LM-Yd-M5f">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parallax image scrolling inside a TableView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzB-Gc-G7W">
+                                            <rect key="frame" x="137" y="11" width="327" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="vzB-Gc-G7W" secondAttribute="centerX" constant="-0.5" id="FRg-4o-KqU"/>
+                                        <constraint firstAttribute="centerY" secondItem="vzB-Gc-G7W" secondAttribute="centerY" constant="0.25" id="Lya-VP-abq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cQG-KG-LJb" id="lcI-g3-9JJ"/>
+                            <outlet property="delegate" destination="cQG-KG-LJb" id="zrz-43-xnd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qki-pV-MyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="533"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple" width="800" height="400"/>
+    </resources>
+</document>
