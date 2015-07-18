@@ -14,25 +14,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="300" id="Q8D-kB-UOk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="300" id="Q8D-kB-UOk" customClass="ImageCell" customModule="ParallaxImageTableView" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q8D-kB-UOk" id="DDk-Vv-03H">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-aN-PtB">
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-Mr-qUb" userLabel="Container View">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-aN-PtB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="KXu-aN-PtB" secondAttribute="height" multiplier="2:1" priority="950" id="iMr-Dc-fTW"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="KXu-aN-PtB" secondAttribute="height" multiplier="2:1" priority="950" id="iMr-Dc-fTW"/>
+                                                <constraint firstAttribute="width" secondItem="MeQ-Mr-qUb" secondAttribute="height" multiplier="2:1" priority="950" id="6dt-dR-lVc"/>
+                                                <constraint firstAttribute="centerY" secondItem="KXu-aN-PtB" secondAttribute="centerY" id="B2X-cA-eBK"/>
+                                                <constraint firstAttribute="trailing" secondItem="KXu-aN-PtB" secondAttribute="trailing" id="HWJ-LV-ttV"/>
+                                                <constraint firstItem="KXu-aN-PtB" firstAttribute="leading" secondItem="MeQ-Mr-qUb" secondAttribute="leading" id="xDC-rd-iR2"/>
                                             </constraints>
-                                        </imageView>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="KXu-aN-PtB" firstAttribute="leading" secondItem="DDk-Vv-03H" secondAttribute="leading" id="Se1-WF-OtH"/>
-                                        <constraint firstItem="KXu-aN-PtB" firstAttribute="top" secondItem="DDk-Vv-03H" secondAttribute="top" id="ZwP-kB-Evg"/>
-                                        <constraint firstAttribute="trailing" secondItem="KXu-aN-PtB" secondAttribute="trailing" id="ft9-rR-VWA"/>
-                                        <constraint firstAttribute="bottom" secondItem="KXu-aN-PtB" secondAttribute="bottom" id="l9l-WZ-jr7"/>
+                                        <constraint firstAttribute="trailing" secondItem="MeQ-Mr-qUb" secondAttribute="trailing" id="7BL-d0-Sfc"/>
+                                        <constraint firstItem="MeQ-Mr-qUb" firstAttribute="leading" secondItem="DDk-Vv-03H" secondAttribute="leading" id="8M7-yU-6XO"/>
+                                        <constraint firstAttribute="bottom" secondItem="MeQ-Mr-qUb" secondAttribute="bottom" id="Dng-v7-yXv"/>
+                                        <constraint firstItem="MeQ-Mr-qUb" firstAttribute="top" secondItem="DDk-Vv-03H" secondAttribute="top" id="MDM-mV-CSV"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageCenterYConstraint" destination="B2X-cA-eBK" id="fty-S8-73n"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" id="Pqd-Fr-LY4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>

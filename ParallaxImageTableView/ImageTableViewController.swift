@@ -10,6 +10,8 @@ import UIKit
 
 class ImageTableViewController: UITableViewController {
 
+    weak var imageCenterYConstraint: NSLayoutConstraint?
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -32,6 +34,10 @@ class ImageTableViewController: UITableViewController {
 
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
 
+        if let imageCell = cell as? ImageCell {
+            imageCenterYConstraint = imageCell.imageCenterYConstraint
+        }
+
         return cell
     }
 
@@ -53,4 +59,15 @@ class ImageTableViewController: UITableViewController {
         }
     }
 
+    // MARK: - Scroll view delegate
+
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        imageCenterYConstraint?.constant = min(0, -scrollView.contentOffset.y / 2.0)
+    }
+
+}
+
+class ImageCell: UITableViewCell {
+
+    @IBOutlet weak var imageCenterYConstraint: NSLayoutConstraint!
 }
