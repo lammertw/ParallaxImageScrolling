@@ -12,6 +12,21 @@ class ImageTableViewController: UITableViewController {
 
     weak var imageCenterYConstraint: NSLayoutConstraint?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
+        self.refreshControl = refreshControl
+    }
+
+    func refresh() {
+        delay(1.0) {
+            self.refreshControl?.endRefreshing()
+        }
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -70,4 +85,8 @@ class ImageTableViewController: UITableViewController {
 class ImageCell: UITableViewCell {
 
     @IBOutlet weak var imageCenterYConstraint: NSLayoutConstraint!
+}
+
+func delay(delay: Double, closure: () -> ()) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
 }
