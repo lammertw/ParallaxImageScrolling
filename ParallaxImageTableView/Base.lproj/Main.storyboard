@@ -22,7 +22,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-aN-PtB">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="KXu-aN-PtB" secondAttribute="height" multiplier="2:1" id="iMr-Dc-fTW"/>
+                                                <constraint firstAttribute="width" secondItem="KXu-aN-PtB" secondAttribute="height" multiplier="2:1" priority="950" id="iMr-Dc-fTW"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
