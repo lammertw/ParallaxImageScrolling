@@ -32,9 +32,11 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="MeQ-Mr-qUb" secondAttribute="height" multiplier="2:1" priority="950" id="6dt-dR-lVc"/>
-                                                <constraint firstAttribute="centerY" secondItem="KXu-aN-PtB" secondAttribute="centerY" id="B2X-cA-eBK"/>
-                                                <constraint firstAttribute="trailing" secondItem="KXu-aN-PtB" secondAttribute="trailing" id="HWJ-LV-ttV"/>
-                                                <constraint firstItem="KXu-aN-PtB" firstAttribute="leading" secondItem="MeQ-Mr-qUb" secondAttribute="leading" id="xDC-rd-iR2"/>
+                                                <constraint firstAttribute="trailing" secondItem="KXu-aN-PtB" secondAttribute="trailing" priority="900" id="HWJ-LV-ttV"/>
+                                                <constraint firstAttribute="bottom" secondItem="KXu-aN-PtB" secondAttribute="bottom" id="eGZ-s1-aqD"/>
+                                                <constraint firstAttribute="centerX" secondItem="KXu-aN-PtB" secondAttribute="centerX" id="roR-fB-D1U"/>
+                                                <constraint firstItem="KXu-aN-PtB" firstAttribute="top" secondItem="MeQ-Mr-qUb" secondAttribute="top" id="uzl-Y0-Lws"/>
+                                                <constraint firstItem="KXu-aN-PtB" firstAttribute="leading" secondItem="MeQ-Mr-qUb" secondAttribute="leading" priority="900" id="xDC-rd-iR2"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -46,7 +48,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageCenterYConstraint" destination="B2X-cA-eBK" id="fty-S8-73n"/>
+                                    <outlet property="bottomSpaceConstraint" destination="eGZ-s1-aqD" id="HcN-9t-7WS"/>
+                                    <outlet property="containerView" destination="MeQ-Mr-qUb" id="LOo-ri-6WB"/>
+                                    <outlet property="topSpaceConstraint" destination="uzl-Y0-Lws" id="kT7-GS-oGX"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" id="Pqd-Fr-LY4">
@@ -55,8 +59,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pqd-Fr-LY4" id="1LM-Yd-M5f">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parallax image scrolling inside a TableView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzB-Gc-G7W">
-                                            <rect key="frame" x="137" y="11" width="327" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Parallax scrolling without Pull to Refresh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzB-Gc-G7W">
+                                            <rect key="frame" x="137" y="10" width="327" height="22"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>

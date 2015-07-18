@@ -10,8 +10,6 @@ import UIKit
 
 class ImageTableViewController: UITableViewController {
 
-    weak var imageCenterYConstraint: NSLayoutConstraint?
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -33,10 +31,6 @@ class ImageTableViewController: UITableViewController {
         }
 
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
-
-        if let imageCell = cell as? ImageCell {
-            imageCenterYConstraint = imageCell.imageCenterYConstraint
-        }
 
         return cell
     }
@@ -62,12 +56,28 @@ class ImageTableViewController: UITableViewController {
     // MARK: - Scroll view delegate
 
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        imageCenterYConstraint?.constant = min(0, -scrollView.contentOffset.y / 2.0)
-    }
+        if let imageCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as? ImageCell {
+            imageCell.scrollViewDidScroll(scrollView)
+        }    }
 
 }
 
 class ImageCell: UITableViewCell {
 
-    @IBOutlet weak var imageCenterYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomSpaceConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topSpaceConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerView: UIView!
+
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y >= 0 {
+            // scrolling up
+            containerView.clipsToBounds = true
+            bottomSpaceConstraint?.constant = -scrollView.contentOffset.y / 2
+            topSpaceConstraint?.constant = scrollView.contentOffset.y / 2
+        } else {
+            // scrolling down
+            topSpaceConstraint?.constant = scrollView.contentOffset.y
+            containerView.clipsToBounds = false
+        }
+    }
 }
