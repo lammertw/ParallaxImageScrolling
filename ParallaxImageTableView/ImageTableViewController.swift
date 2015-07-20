@@ -70,12 +70,12 @@ class ImageCell: UITableViewCell {
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if scrollView.contentOffset.y >= 0 {
-            // scrolling up
+            // scrolling down
             containerView.clipsToBounds = true
             bottomSpaceConstraint?.constant = -scrollView.contentOffset.y / 2
             topSpaceConstraint?.constant = scrollView.contentOffset.y / 2
         } else {
-            // scrolling down
+            // scrolling up
             topSpaceConstraint?.constant = scrollView.contentOffset.y
             containerView.clipsToBounds = false
         }
