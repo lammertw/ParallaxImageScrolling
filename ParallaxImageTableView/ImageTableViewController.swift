@@ -58,7 +58,14 @@ class ImageTableViewController: UITableViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let imageCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ImageCell {
             imageCell.scrollViewDidScroll(scrollView)
-        }    }
+            
+            let navigationBarHeight = navigationController?.navigationBar.frame.size.height ?? 0
+            let statusBarHeight = UIApplication.shared.statusBarFrame.height
+            let offset = navigationBarHeight == 0 ? 0 : navigationBarHeight + statusBarHeight
+            
+            imageCell.scrollViewDidScroll(scrollView, offset: offset)
+        }
+    }
 
 }
 
@@ -68,15 +75,15 @@ class ImageCell: UITableViewCell {
     @IBOutlet weak var topSpaceConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y >= 0 {
+    func scrollViewDidScroll(_ scrollView: UIScrollView, offset: CGFloat = 0) {
+        if scrollView.contentOffset.y >= -offset {
             // scrolling up
             containerView.clipsToBounds = true
-            bottomSpaceConstraint?.constant = -scrollView.contentOffset.y / 2
-            topSpaceConstraint?.constant = scrollView.contentOffset.y / 2
+            bottomSpaceConstraint?.constant = (-scrollView.contentOffset.y - offset) / 2
+            topSpaceConstraint?.constant = (scrollView.contentOffset.y + offset) / 2
         } else {
             // scrolling down
-            topSpaceConstraint?.constant = scrollView.contentOffset.y
+            topSpaceConstraint?.constant = scrollView.contentOffset.y + offset
             containerView.clipsToBounds = false
         }
     }
